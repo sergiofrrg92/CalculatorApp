@@ -25,5 +25,5 @@
     <string name="button_parenthesis">()</string>
     <string name="button_backspace"> </string>
 
-    <string name="calculator_text">Calculator</string>
+    <string name="calculator_text">Enter a value</string>
 </resources>

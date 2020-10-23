@@ -7,37 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/calculatorText"
-        android:layout_width="188dp"
-        android:layout_height="41dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:autofillHints="false"
+        android:inputType="none"
+        tools:ignore="LabelFor"
         android:text="@string/calculator_text"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/calculatorScreen"
-        android:layout_width="254dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculatorText"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
         android:id="@+id/buttonsTableLayout"
@@ -52,123 +35,160 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_clear"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="#DD2C00"
                 android:text="@string/button_clear"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_parenthesis"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_parenthesis"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_power"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_power"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_division"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_division"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_7"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/circle"
                 android:text="@string/button_7"
-                android:textColor="#000000" />
+                android:textSize="24sp"
+                android:textColor="#FFFFFF" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_8"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_8"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_9"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_9"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_multi"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_multi"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_4"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_4"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_5"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_5"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_6"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_6"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_substract"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_substract"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
         </TableRow>
 
@@ -176,93 +196,121 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_1"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
 
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_1"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_2"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_2"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_3"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_3"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_addition"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_addition"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_plusminus"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_plusMinus"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_0"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_0"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_dot"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_point"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:layout_margin="5dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_equals"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/circle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 android:text="@string/button_equal"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:backgroundTint="#43A047"
+                android:layout_margin="5dp" />
         </TableRow>
     </TableLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/button_backspace"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_backspace"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/button_backspace"
         android:textColor="#000000"
+        android:background="@drawable/circle"
+        app:srcCompat="@drawable/backspace"
         app:layout_constraintBottom_toTopOf="@+id/buttonsTableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
