@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -118,7 +119,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void parenthesisButton(View view){
-        //TODO
+
+        //This system has flaws, I cannot write something like (5*(4+2)) if I wanted to, the second parenthesis will close. The only honest solution (and easiest by far) would be to have two buttons.
+        int openPar = 0;
+        int closedPar = 0;
+        int textLength = display.getText().length();
+        int cursorPosition = display.getSelectionStart();
+
+        for(int i = 0; i<cursorPosition; i++){
+            if(display.getText().toString().substring(i, i+1).equals("(")){
+                openPar++;
+            }
+            if(display.getText().toString().substring(i, i+1).equals(")")){
+                closedPar++;
+            }
+        }
+        if(openPar == closedPar || display.getText().toString().substring(textLength-1,textLength).equals("(")){
+            updateText("(");
+        }
+        else if(closedPar < openPar && !display.getText().toString().substring(textLength-1,textLength).equals("(")){
+            updateText(")");
+        }
+
+
     }
 
     public void clearButton(View view){
@@ -130,7 +153,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void equalsButton(View view){
-        //TODO
+        String userExpresion = display.getText().toString();
+
+        userExpresion = userExpresion.replaceAll("x", "*");
+
+        Expression exp = new Expression(userExpresion);
+        String result=String.valueOf(exp.calculate());
+
+        display.setText(result);
+        display.setSelection(result.length());
     }
 
     public void dotButton(View view){
