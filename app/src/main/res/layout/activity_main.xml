@@ -50,15 +50,28 @@
                 android:textSize="24sp" />
 
             <android.widget.Button
-                android:id="@+id/button_parenthesis"
+                android:id="@+id/button_left_parenthesis"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/circle"
-                android:onClick="parenthesisButton"
-                android:text="@string/button_parenthesis"
+                android:onClick="leftParenthesisButton"
+                android:text="@string/button_left_parenthesis"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <android.widget.Button
+                android:id="@+id/button_right_parenthesis"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="rightParenthesisButton"
+                android:text="@string/button_right_parenthesis"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 

@@ -118,30 +118,12 @@ public class MainActivity extends AppCompatActivity {
         updateText("/");
     }
 
-    public void parenthesisButton(View view){
+    public void leftParenthesisButton(View view){
+        updateText("(");
+    }
 
-        //This system has flaws, I cannot write something like (5*(4+2)) if I wanted to, the second parenthesis will close. The only honest solution (and easiest by far) would be to have two buttons.
-        int openPar = 0;
-        int closedPar = 0;
-        int textLength = display.getText().length();
-        int cursorPosition = display.getSelectionStart();
-
-        for(int i = 0; i<cursorPosition; i++){
-            if(display.getText().toString().substring(i, i+1).equals("(")){
-                openPar++;
-            }
-            if(display.getText().toString().substring(i, i+1).equals(")")){
-                closedPar++;
-            }
-        }
-        if(openPar == closedPar || display.getText().toString().substring(textLength-1,textLength).equals("(")){
-            updateText("(");
-        }
-        else if(closedPar < openPar && !display.getText().toString().substring(textLength-1,textLength).equals("(")){
-            updateText(")");
-        }
-
-
+    public void rightParenthesisButton(View view){
+        updateText(")");
     }
 
     public void clearButton(View view){
